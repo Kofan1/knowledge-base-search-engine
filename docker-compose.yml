@@ -1,0 +1,13 @@
+services:
+  knowledge-api:
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      KB_DB_PATH: /app/data/knowledge.db
+    volumes:
+      - knowledge-data:/app/data
+
+volumes:
+  knowledge-data:
+
